@@ -1,19 +1,20 @@
 
-import { Button } from "@repo/ui/button"
-import {Card} from "@repo/ui/card"
 import './App.css'
 import * as React from "react"
+import { BrowserRouter , Route , Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage.tsx'
+import ImageClassificationEngine from './pages/ImageClassificationEngine.tsx'
 
-function App() {
-
-
+ const App = () => {
   return (
-    <>
-      <Button />
-      <h1 className='underline text-3xl'>HI How are u</h1>
-      <Card/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/image-classify" element={<ImageClassificationEngine/>} />
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;
