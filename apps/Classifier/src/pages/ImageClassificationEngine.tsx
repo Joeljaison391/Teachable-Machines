@@ -118,7 +118,9 @@ const ImageClassificationEngine: React.FC = () => {
 
       setImagesAdded((prev) => {
         const newImagesAdded = [...prev];
-        newImagesAdded[classId] += files.length;
+        if (newImagesAdded[classId] !== undefined) {
+          newImagesAdded[classId] += files.length;
+        }
         return newImagesAdded;
       });
 
