@@ -1,28 +1,39 @@
 import React from 'react';
 import { Card } from '@repo/ui/card';
-import  {Button}  from '@repo/ui/button';
-
+import { Button } from '@repo/ui/button';
 
 const HomePage: React.FC = () => {
-    return (
-        <div>
-              <div className="w-full h-[100vh]">      <h2>Teachable Machine</h2>
-      <div className="flex  mr-auto ml-auto  flex-col">
-        <div className="text-2xl">New Project</div>
-        <div className="flex justify-evenly w-full h-auto p-3"><Card title="Image Project" description="Tech based on image from your files or web cam" coverImage="https://via.placeholder.com/150" >
-        <Button type="link" text="Try it!" link="/image-classify" />
-          
-        </Card>
-        <Card title="Card Title" description="Card Description" coverImage="https://via.placeholder.com/150" >
-          <p>Card Content</p>
-        </Card>
-        <Card title="Card Title" description="Tech based on image from your files or web cam" coverImage="https://via.placeholder.com/150" >
-          <p>Card Content</p>
-        </Card></div>
-        
-      </div></div>
+  return (
+    <div className="w-full h-screen flex flex-col justify-center items-center bg-gray-100">
+      <h2 className="text-4xl font-bold mb-8">Teachable Machine</h2>
+      <div className="flex flex-col items-center">
+        <div className="text-2xl mb-4">New Project</div>
+        <div className="flex flex-wrap justify-center gap-8 w-full p-4">
+          <Card
+            title="Image Project"
+            description="Tech based on image from your files or web cam"
+            coverImage="https://teachablemachine.withgoogle.com/assets/img/project-samples/image/sample1.jpg"
+          >
+            <Button type="link" text="Try it!" link="/image-classify" />
+          </Card>
+          <Card
+            title="Card Title"
+            description="Card Description"
+            coverImage="https://via.placeholder.com/150"
+          >
+            <p>Card Content</p>
+          </Card>
+          <Card
+            title="Card Title"
+            description="Tech based on image from your files or web cam"
+            coverImage="https://via.placeholder.com/150"
+          >
+            <p>Card Content</p>
+          </Card>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
