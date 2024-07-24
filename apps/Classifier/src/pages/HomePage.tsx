@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card } from '@repo/ui/card';
-import { Button } from '@repo/ui/button';
+import React from "react";
+import { Card } from "@repo/ui/card";
+import { Button } from "@repo/ui/button";
 
 const HomePage: React.FC = () => {
   return (
@@ -17,18 +17,19 @@ const HomePage: React.FC = () => {
             <Button type="link" text="Try it!" link="/image-classify" />
           </Card>
           <Card
-            title="Card Title"
-            description="Card Description"
-            coverImage="https://via.placeholder.com/150"
+            title="Pose Project"
+            description="Teach based on images, from
+                          files or your webcam."
+            coverImage="https://teachablemachine.withgoogle.com/assets/img/project-samples/pose/sample2.jpg"
           >
-            <p>Card Content</p>
+            <Button type="link" text="Try it!" link="/pose-estimation" />
           </Card>
           <Card
-            title="Card Title"
+            title="Audio Project"
             description="Tech based on image from your files or web cam"
             coverImage="https://via.placeholder.com/150"
           >
-            <p>Card Content</p>
+             <Button type="link" text="Try it!" link="/audio-classification" />
           </Card>
         </div>
       </div>
